@@ -1,0 +1,251 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="BT2" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
+        <property name="iterations" class="ptolemy.data.expr.Parameter" value="AUTO">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[175.0, 100.0]">
+        </property>
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-11, -11, 1942, 1042}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1703, 896]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.9531250000000002">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{403.1793863546714, 248.34210816061116}">
+    </property>
+    <entity name="FSMActor" class="ptolemy.domains.modal.modal.ModalModel">
+        <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[385.0, 275.0]">
+        </property>
+        <port name="click" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="singleClick" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="doubleClick" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+            <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                <configure>
+      <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
+    </configure>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-11, -11, 1942, 1042}, maximized=true}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1703, 896]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.5625">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{236.31006940205913, 207.23638661702483}">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.EditorIcon">
+                <property name="ellipse" class="ptolemy.vergil.kernel.attributes.EllipseAttribute">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{-20, -15}">
+                    </property>
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="30">
+                    </property>
+                    <property name="height" class="ptolemy.data.expr.Parameter" value="30">
+                    </property>
+                    <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                    <property name="fillColor" class="ptolemy.actor.gui.ColorAttribute" value="{1.0, 1.0, 1.0, 1.0}">
+                    </property>
+                </property>
+            </property>
+            <property name="N" class="ptolemy.data.expr.Parameter" value="0.5">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[450.0, 185.0]">
+                </property>
+            </property>
+            <port name="click" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[40.0, 70.0]">
+                </property>
+            </port>
+            <port name="singleClick" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[365.0, 55.0]">
+                </property>
+            </port>
+            <port name="doubleClick" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[365.0, 95.0]">
+                </property>
+            </port>
+            <entity name="NO CLICK" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{5.0, 280.0}">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <entity name="1 CLICK" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[430.0, 285.0]">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="click = true">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="count = 0">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.8057405500398453">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.09003171369454793">
+                </property>
+            </relation>
+            <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count&gt;=N">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="singleClick = true; &#10;doubleClick = false">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.5690640377447133">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.8588807566629457">
+                </property>
+            </relation>
+            <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count&lt;N &amp; click = false">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="count = count + 0.1">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.616055305223719">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.6610185217237372">
+                </property>
+            </relation>
+            <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="click = false | (N-count)&gt;0">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="singleClick = false; &#10;doubleClick = false;&#10;count = count + 1">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.725522198528096">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.7141924674862847">
+                </property>
+            </relation>
+            <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="count&lt;N &amp; click=true">
+                </property>
+                <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="doubleClick=true; singleClick=false">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.027422917531492768">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.1286968275732794">
+                </property>
+            </relation>
+            <link port="NO CLICK.incomingPort" relation="relation5"/>
+            <link port="NO CLICK.incomingPort" relation="relation7"/>
+            <link port="NO CLICK.incomingPort" relation="relation"/>
+            <link port="NO CLICK.outgoingPort" relation="relation2"/>
+            <link port="NO CLICK.outgoingPort" relation="relation7"/>
+            <link port="1 CLICK.incomingPort" relation="relation2"/>
+            <link port="1 CLICK.incomingPort" relation="relation3"/>
+            <link port="1 CLICK.outgoingPort" relation="relation5"/>
+            <link port="1 CLICK.outgoingPort" relation="relation3"/>
+            <link port="1 CLICK.outgoingPort" relation="relation"/>
+        </entity>
+        <relation name="clickRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="singleClickRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="doubleClickRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <link port="click" relation="clickRelation"/>
+        <link port="singleClick" relation="singleClickRelation"/>
+        <link port="doubleClick" relation="doubleClickRelation"/>
+        <link port="_Controller.click" relation="clickRelation"/>
+        <link port="_Controller.singleClick" relation="singleClickRelation"/>
+        <link port="_Controller.doubleClick" relation="doubleClickRelation"/>
+    </entity>
+    <entity name="SequencePlotter" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[545.0, 140.0]">
+        </property>
+    </entity>
+    <entity name="SequencePlotter2" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[535.0, 240.0]">
+        </property>
+    </entity>
+    <entity name="SequencePlotter3" class="ptolemy.actor.lib.gui.SequencePlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[535.0, 330.0]">
+        </property>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{335.5036717058824, 194.5823251176471}">
+        </vertex>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="FSMActor.click" relation="relation"/>
+    <link port="FSMActor.singleClick" relation="relation2"/>
+    <link port="FSMActor.doubleClick" relation="relation3"/>
+    <link port="SequencePlotter.input" relation="relation"/>
+    <link port="SequencePlotter2.input" relation="relation2"/>
+    <link port="SequencePlotter3.input" relation="relation3"/>
+</entity>

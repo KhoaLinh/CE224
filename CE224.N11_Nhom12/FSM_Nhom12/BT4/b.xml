@@ -1,0 +1,244 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="model1" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <entity name="ModalModel" class="ptolemy.domains.modal.modal.ModalModel">
+        <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{320, 140}">
+        </property>
+        <port name="A" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="B" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="R" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="O" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="output"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+            <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                <configure>
+      <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
+    </configure>
+            </property>
+            <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1017, 279, 939, 656}, maximized=false}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 510]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{347.0, 259.8125}">
+            </property>
+            <port name="A" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
+                </property>
+            </port>
+            <port name="B" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 240.0}">
+                </property>
+            </port>
+            <port name="R" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 280.0}">
+                </property>
+            </port>
+            <port name="O" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="output"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[510.0, 230.0]">
+                </property>
+            </port>
+            <entity name="nAnB" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 255.0]">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <entity name="nAB" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[260.0, 125.0]">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <entity name="AB" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[420.0, 260.0]">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <entity name="AnB" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[275.0, 390.0]">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </entity>
+            <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="B">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.6514819111733687">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.5950821175962944">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="A">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.4526262668985237">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="A">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="O = true">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.6970345558315973">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.5446625333422145">
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="B">
+                </property>
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="O = true">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.41598493965541367">
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="R">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.3150976134721055">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.5564787062891936">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="R">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5071370984412346">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.386541113280197">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                    <display name="default"/>
+                </property>
+                <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="R">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.12890314931123104">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.111347713897678">
+                </property>
+            </relation>
+            <link port="nAnB.incomingPort" relation="relation5"/>
+            <link port="nAnB.incomingPort" relation="relation6"/>
+            <link port="nAnB.incomingPort" relation="relation7"/>
+            <link port="nAnB.outgoingPort" relation="relation"/>
+            <link port="nAnB.outgoingPort" relation="relation2"/>
+            <link port="nAB.incomingPort" relation="relation"/>
+            <link port="nAB.outgoingPort" relation="relation3"/>
+            <link port="nAB.outgoingPort" relation="relation5"/>
+            <link port="AB.incomingPort" relation="relation3"/>
+            <link port="AB.incomingPort" relation="relation4"/>
+            <link port="AB.outgoingPort" relation="relation7"/>
+            <link port="AnB.incomingPort" relation="relation2"/>
+            <link port="AnB.outgoingPort" relation="relation4"/>
+            <link port="AnB.outgoingPort" relation="relation6"/>
+        </entity>
+        <relation name="ARelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="BRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="RRelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="ORelation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <link port="A" relation="ARelation"/>
+        <link port="B" relation="BRelation"/>
+        <link port="R" relation="RRelation"/>
+        <link port="O" relation="ORelation"/>
+        <link port="_Controller.A" relation="ARelation"/>
+        <link port="_Controller.B" relation="BRelation"/>
+        <link port="_Controller.R" relation="RRelation"/>
+        <link port="_Controller.O" relation="ORelation"/>
+    </entity>
+</entity>
